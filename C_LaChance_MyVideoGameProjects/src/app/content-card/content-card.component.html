@@ -1,5 +1,14 @@
-<p>content-card works!</p>
-<body>
-  {{myContentList.getContentProperties(0)}}
-</body>
+<!DOCTYPE html>
 
+<html>
+<head>
+  <title>My Game Projects</title>
+  <link rel="stylesheet" href="content-card.component.css">
+</head>
+<body>
+  <div [innerHtml]="myContentArr[0]"></div>
+  <div [innerHtml]="myContentArr[1]"></div>
+  <div [innerHtml]="myContentArr[2]"></div>
+  <div [innerHtml]="myContentArr[3]"></div>
+</body>
+</html>

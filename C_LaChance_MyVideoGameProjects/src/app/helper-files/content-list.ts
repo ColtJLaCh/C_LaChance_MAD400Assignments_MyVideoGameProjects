@@ -21,13 +21,15 @@ export class ContentList {
 
   public getContentProperties(index: number) {
     var html = `
-      ${this.contentArr[index].title}
-      ${this.contentArr[index].description}
-      ${this.contentArr[index].creator}
-      ${this.contentArr[index].imgURL}
-      ${this.contentArr[index].type}
+    <p>
+      <h3>${this.contentArr[index].title}</h3></br>
+      ${this.contentArr[index].description}</br></br>
+      <b>${this.contentArr[index].creator}</b></br></br>
+      <img src=${this.contentArr[index].imgURL}></br>
+      ${this.contentArr[index].type}</br>
+    </p>
     `;
-    
+    console.log(this.contentArr[index].imgURL);
     return html;
   }
 }
