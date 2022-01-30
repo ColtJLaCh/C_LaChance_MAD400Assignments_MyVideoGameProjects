@@ -62,7 +62,7 @@ export class ContentCardComponent implements OnInit {
     this.myContentArr[0] = this.myContentList.getContentProperties(0);
     this.myContentArr[1] = this.myContentList.getContentProperties(1);
     this.myContentArr[2] = this.myContentList.getContentProperties(2);
-    this.myContentArr[2] = this.myContentList.getContentProperties(3);
+    this.myContentArr[3] = this.myContentList.getContentProperties(3);
 
   }
 

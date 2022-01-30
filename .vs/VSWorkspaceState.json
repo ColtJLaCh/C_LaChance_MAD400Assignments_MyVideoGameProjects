@@ -5,7 +5,8 @@
     "\\C_LaChance_MyVideoGameProjects\\src",
     "\\C_LaChance_MyVideoGameProjects\\src\\app",
     "\\C_LaChance_MyVideoGameProjects\\src\\app\\content-card",
-    "\\C_LaChance_MyVideoGameProjects\\src\\app\\helper-files"
+    "\\C_LaChance_MyVideoGameProjects\\src\\app\\helper-files",
+    "\\C_LaChance_MyVideoGameProjects\\src\\assets"
   ],
   "SelectedNode": "\\C_LaChance_MyVideoGameProjects\\src\\app\\content-card\\content-card.component.html",
   "PreviewInSolutionExplorer": false
