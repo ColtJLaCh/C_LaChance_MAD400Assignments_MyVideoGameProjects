@@ -1,14 +1,9 @@
-<!DOCTYPE html>
+<div>
+  <h2>{{this.content?.title}}</h2>
+  <p>{{this.content?.type}}</p>
+  <p>{{this.content?.description}}</p>
+  <img src="{{this.content?.imgURL}}" (click)="imgOnClick()">
+  <p>{{this.content?.creator}}</p>
+  <p *ngFor="let tag of content?.tags;" [innerHtml]="tag"></p>
+</div>
 
-<html>
-<head>
-  <title>My Game Projects</title>
-  <link rel="stylesheet" href="content-card.component.css">
-</head>
-<body>
-  <div [innerHtml]="myContentArr[0]"></div>
-  <div [innerHtml]="myContentArr[1]"></div>
-  <div [innerHtml]="myContentArr[2]"></div>
-  <div [innerHtml]="myContentArr[3]"></div>
-</body>
-</html>
