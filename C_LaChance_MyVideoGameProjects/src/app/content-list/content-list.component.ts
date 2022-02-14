@@ -12,6 +12,7 @@ export class ContentListComponent implements OnInit {
   myContentArr: Content[] = new Array();
   searchValue: string = "";
   searchedTitle: string = "";
+  searchedTitleClass: string = "";
 
   constructor() {
     if (window.sessionStorage.getItem("searchTerm") != null) {
@@ -20,6 +21,10 @@ export class ContentListComponent implements OnInit {
 
     if (window.sessionStorage.getItem("searchedTitle") != null) {
       this.searchedTitle = window.sessionStorage.getItem("searchedTitle")!;
+    }
+
+    if (window.sessionStorage.getItem("searchedTitleClass") != null) {
+      this.searchedTitleClass = window.sessionStorage.getItem("searchedTitleClass")!;
     }
   }
 
@@ -117,6 +122,11 @@ export class ContentListComponent implements OnInit {
       }
     }
     window.sessionStorage.setItem("searchedTitle", displayMessage);
+    if (displayMessage == "No, item does not exist.") {
+      window.sessionStorage.setItem("searchedTitleClass", "No");
+    } else {
+      window.sessionStorage.setItem("searchedTitleClass", "Yes");
+    }
     location.reload();
   }
 

@@ -26,3 +26,10 @@ li.isFirst {
     background: lime;
   }
 
+p.No {
+  color: red;
+}
+
+p.Yes {
+  color: green;
+}
