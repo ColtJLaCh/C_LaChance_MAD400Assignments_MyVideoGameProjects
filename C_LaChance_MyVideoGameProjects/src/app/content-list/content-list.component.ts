@@ -30,7 +30,7 @@ export class ContentListComponent implements OnInit {
     familiar = {
       id: 1,
       title: "Familiar",
-      description: "A virtual pet game for VR! Based on a card game I created.",
+      description: "A virtual pet game for VR! Based on a card game I created. WIP",
       creator: "Colton LaChance",
       imgURL: "./assets/familiar.png",
       type: "Video Game",
@@ -39,7 +39,7 @@ export class ContentListComponent implements OnInit {
 
     let slimeHunt: Content;
     slimeHunt = {
-      id: 2,
+      id: 3,
       title: "Slime Hunt",
       description: "A game I made for the Bangle.js smart watch, currently on their public app loader!",
       creator: "Colton LaChance",
@@ -50,7 +50,7 @@ export class ContentListComponent implements OnInit {
 
     let achilles: Content;
     achilles = {
-      id: 2,
+      id: 4,
       title: "Achilles",
       description: "A game I started in Gamemaker then Unity. WIP.",
       creator: "Colton LaChance",
@@ -61,13 +61,33 @@ export class ContentListComponent implements OnInit {
 
     let familiarCardGame: Content;
     familiarCardGame = {
-      id: 2,
+      id: 5,
       title: "Familiar Card Game",
       description: "An online similator so I can test my card game with friends before printing",
       creator: "Colton LaChance",
       imgURL: "./assets/ppspells.png",
-      type: "Video Game",
+      type: "Card Game",
       tags: ["Card-Game", "Online","Sim"]
+    }
+
+    let skiesOfSynia: Content;
+    skiesOfSynia = {
+      id: 6,
+      title: "Skies Of Synia",
+      description: "A project my girlfriend and I are collaborating on. Not started currently.",
+      creator: "Colton LaChance, Jaida Browning",
+      imgURL: "./assets/ppspells.png",
+      tags: ["Action", "Story-driven", "RPG"]
+    }
+
+    let dontSpillTheCoffee: Content;
+    dontSpillTheCoffee = {
+      id: 7,
+      title: "Don't Spill The Coffee",
+      description: "A VR game where you have to make it through levels without spilling a cup of coffee. Not yet started.",
+      creator: "Colton LaChance",
+      imgURL: "./assets/ppspells.png",
+      tags: ["Skill", "Level-based", "VR"]
     }
 
     this.myContentArr.push(magiCarnage);
@@ -75,6 +95,8 @@ export class ContentListComponent implements OnInit {
     this.myContentArr.push(slimeHunt);
     this.myContentArr.push(achilles);
     this.myContentArr.push(familiarCardGame);
+    this.myContentArr.push(skiesOfSynia);
+    this.myContentArr.push(dontSpillTheCoffee);
   }
 
 }
