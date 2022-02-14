@@ -1,5 +1,11 @@
+<div>
+  <h4>Template reference variable</h4>
+  <input #searchTerm>:{{searchValue}}
+  <br><button (click)="updatePage(searchTerm.value)">Update page</button>
+</div>
+
 <ul>
-  <li *ngFor="let content of myContentArr; index as i; first as isFirst" [class.isFirst]="isFirst">
+  <li *ngFor="let content of (myContentArr | searchPipe: searchValue); index as i; first as isFirst" [class.isFirst]="isFirst">
      <app-content-card [content]="content"></app-content-card>
   </li>
  </ul>

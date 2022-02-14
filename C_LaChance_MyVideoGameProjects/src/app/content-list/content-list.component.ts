@@ -10,8 +10,13 @@ import { Content } from '../helper-files/content-interface';
 export class ContentListComponent implements OnInit {
 
   myContentArr: Content[] = new Array();
+  searchValue: string = "";
 
-  constructor() { } 
+  constructor() {
+    if (window.sessionStorage.getItem("searchTerm") != null) {
+      this.searchValue = window.sessionStorage.getItem("searchTerm")!;
+    }
+  }
 
   ngOnInit(): void {
 
@@ -99,4 +104,8 @@ export class ContentListComponent implements OnInit {
     this.myContentArr.push(dontSpillTheCoffee);
   }
 
+  updatePage(sTerm: string): void {
+    window.sessionStorage.setItem("searchTerm", sTerm);
+    location.reload();
+  }
 }
