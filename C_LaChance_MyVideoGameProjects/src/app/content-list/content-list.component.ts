@@ -27,7 +27,7 @@ export class ContentListComponent implements OnInit {
       description: "An online wizard fighting game, currently in development on the steam store!",
       creator: "Colton LaChance",
       imgURL: "./assets/magicarnage.png",
-      type: "Video Game",
+      type: "VideoGame",
       tags: ["Arena-Figter","Online"]
     }
 
@@ -38,7 +38,7 @@ export class ContentListComponent implements OnInit {
       description: "A virtual pet game for VR! Based on a card game I created. WIP",
       creator: "Colton LaChance",
       imgURL: "./assets/familiar.png",
-      type: "Video Game",
+      type: "VideoGame",
       tags: ["VR", "Pet-Sim"]
     }
 
@@ -49,7 +49,7 @@ export class ContentListComponent implements OnInit {
       description: "A game I made for the Bangle.js smart watch, currently on their public app loader!",
       creator: "Colton LaChance",
       imgURL: "./assets/slimehunt.png",
-      type: "Video Game",
+      type: "VideoGame",
       tags: ["Mobile", "RPG-lite"]
     }
 
@@ -60,7 +60,7 @@ export class ContentListComponent implements OnInit {
       description: "A game I started in Gamemaker then Unity. WIP.",
       creator: "Colton LaChance",
       imgURL: "./assets/achilles.png",
-      type: "Video Game",
+      type: "VideoGame",
       tags: ["Sidescroller", "Arcade"]
     }
 
@@ -71,7 +71,7 @@ export class ContentListComponent implements OnInit {
       description: "An online similator so I can test my card game with friends before printing",
       creator: "Colton LaChance",
       imgURL: "./assets/ppspells.png",
-      type: "Card Game",
+      type: "CardGame",
       tags: ["Card-Game", "Online","Sim"]
     }
 

@@ -18,5 +18,11 @@ li.isFirst {
   margin-bottom: 5%;
 }
 
- {
-}
+  li.VideoGame {
+     background: red;
+  }
+
+  li.CardGame {
+    background: lime;
+  }
+

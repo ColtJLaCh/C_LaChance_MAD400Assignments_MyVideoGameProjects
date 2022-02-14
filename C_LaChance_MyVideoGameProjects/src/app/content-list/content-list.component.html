@@ -5,7 +5,7 @@
 </div>
 
 <ul>
-  <li *ngFor="let content of (myContentArr | searchPipe: searchValue); index as i; first as isFirst" [class.isFirst]="isFirst">
+  <li *ngFor="let content of (myContentArr | searchPipe: searchValue); index as i; first as isFirst" [class.isFirst]="isFirst" class="{{content.type}}">
      <app-content-card [content]="content"></app-content-card>
   </li>
  </ul>
