@@ -1,5 +1,12 @@
 <div>
-  <h4>Template reference variable</h4>
+  <h4>Search For Title</h4>
+  <input #searchTitle>
+  <br><button (click)="searchForTitle(searchTitle.value)">Search</button><br>
+  <p>{{searchedTitle}}</p>
+</div>
+
+<div>
+  <h4>Search For Type</h4>
   <input #searchTerm>:{{searchValue}}
   <br><button (click)="updatePage(searchTerm.value)">Update page</button>
 </div>

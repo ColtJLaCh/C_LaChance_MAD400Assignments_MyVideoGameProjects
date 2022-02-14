@@ -11,10 +11,15 @@ export class ContentListComponent implements OnInit {
 
   myContentArr: Content[] = new Array();
   searchValue: string = "";
+  searchedTitle: string = "";
 
   constructor() {
     if (window.sessionStorage.getItem("searchTerm") != null) {
       this.searchValue = window.sessionStorage.getItem("searchTerm")!;
+    }
+
+    if (window.sessionStorage.getItem("searchedTitle") != null) {
+      this.searchedTitle = window.sessionStorage.getItem("searchedTitle")!;
     }
   }
 
@@ -102,6 +107,17 @@ export class ContentListComponent implements OnInit {
     this.myContentArr.push(familiarCardGame);
     this.myContentArr.push(skiesOfSynia);
     this.myContentArr.push(dontSpillTheCoffee);
+  }
+
+  searchForTitle(sTerm: string): void {
+    var displayMessage = "No, item does not exist.";
+    for (var i = 0; i < this.myContentArr.length; i++) {
+      if (this.myContentArr[i].title == sTerm) {
+        displayMessage = "Yes this item exists!"
+      }
+    }
+    window.sessionStorage.setItem("searchedTitle", displayMessage);
+    location.reload();
   }
 
   updatePage(sTerm: string): void {
