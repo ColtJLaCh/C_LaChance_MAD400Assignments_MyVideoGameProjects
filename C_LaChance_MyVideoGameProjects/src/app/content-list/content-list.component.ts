@@ -5,7 +5,7 @@ import { Content } from '../helper-files/content-interface';
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
-  styleUrls: ['./content-list.component.css']
+  styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
 
@@ -91,7 +91,6 @@ export class ContentListComponent implements OnInit {
       title: "Skies Of Synia",
       description: "A project my girlfriend and I are collaborating on. Not started currently.",
       creator: "Colton LaChance, Jaida Browning",
-      imgURL: "./assets/colton3.png",
       tags: ["Action", "Story-driven", "RPG"]
     }
 
@@ -101,7 +100,6 @@ export class ContentListComponent implements OnInit {
       title: "Don't Spill The Coffee",
       description: "A VR game where you have to make it through levels without spilling a cup of coffee. Not yet started.",
       creator: "Colton LaChance",
-      imgURL: "./assets/colton3.png",
       tags: ["Skill", "Level-based", "VR"]
     }
 
