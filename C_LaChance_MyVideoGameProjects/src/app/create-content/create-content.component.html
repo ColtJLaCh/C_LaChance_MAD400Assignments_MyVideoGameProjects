@@ -1,0 +1,12 @@
+<div>
+  <h4>Add additional games</h4>
+  <input #contentID> ID <br />
+  <input #contentTitle> TITLE<br />
+  <input #contentDesc> DESCRIPTION<br />
+  <input #contentCreator> CREATOR<br />
+  <input #contentImgURL> IMAGE URL (OPTIONAL)<br />
+  <input #contentType> TYPE (OPTIONAL)<br />
+  <input #contentTags> TAGS (SEPARATE BY ',')<br />
+  <br><button (click)="createContent(contentID.value,contentTitle.value,contentDesc.value,contentCreator.value,contentImgURL.value,contentType.value,contentTags.value)">Create</button><br>
+  <p *ngIf="failMessage" class="error">{{failMessage}}</p>
+</div>

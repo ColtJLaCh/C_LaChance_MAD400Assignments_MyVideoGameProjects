@@ -6,9 +6,10 @@
     "\\C_LaChance_MyVideoGameProjects\\src\\app",
     "\\C_LaChance_MyVideoGameProjects\\src\\app\\content-card",
     "\\C_LaChance_MyVideoGameProjects\\src\\app\\content-list",
+    "\\C_LaChance_MyVideoGameProjects\\src\\app\\create-content",
     "\\C_LaChance_MyVideoGameProjects\\src\\app\\helper-files",
     "\\C_LaChance_MyVideoGameProjects\\src\\assets"
   ],
-  "SelectedNode": "\\C_LaChance_MyVideoGameProjects\\src\\app\\content-list\\content-list.component.ts",
+  "SelectedNode": "\\C_LaChance_MyVideoGameProjects\\src\\app\\create-content\\create-content.component.html",
   "PreviewInSolutionExplorer": false
 }

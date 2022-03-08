@@ -132,4 +132,13 @@ export class ContentListComponent implements OnInit {
     window.sessionStorage.setItem("searchTerm", sTerm);
     location.reload();
   }
+
+  addContentToList(newContentFromChild: Content) {
+    this.myContentArr.push(newContentFromChild);
+    // We need to clone the array for the pipe to work
+    // This is an old way of cloning an object
+    this.myContentArr = Object.assign([], this.myContentArr);
+    // This is a newer, faster way to clone an array
+    this.myContentArr = [...this.myContentArr]; // using the spread operator <- Nice!
+  }
 }
