@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentCardComponent } from '../content-card/content-card.component';
 import { Content } from '../helper-files/content-interface';
+import { InMemoryDataService } from '../services/in-memory-data.service';
 import { ProjectService } from '../services/project.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class ContentListComponent implements OnInit {
   searchedTitle: string = "";
   searchedTitleClass: string = "";
 
-  constructor(private projectService: ProjectService) {
+  constructor(private projectService: ProjectService, private memoryService: InMemoryDataService) {
     if (window.sessionStorage.getItem("searchTerm") != null) {
       this.searchValue = window.sessionStorage.getItem("searchTerm")!;
     }
@@ -32,6 +33,14 @@ export class ContentListComponent implements OnInit {
   ngOnInit(): void {
     this.projectService.getContent().subscribe(listOfProjects => this.projectList = listOfProjects);
   }
+
+  updateContentInList(contentItem: Content): void {
+    this.projectService.updateContent(contentItem)
+      .subscribe(() =>
+        console.log("Content updated successfully")
+      );
+  }
+
 
   searchForTitle(sTerm: string): void {
     var displayMessage = "No, item does not exist.";
@@ -61,5 +70,20 @@ export class ContentListComponent implements OnInit {
     this.projectList = Object.assign([], this.projectList);
     // This is a newer, faster way to clone an array
     this.projectList = [...this.projectList]; // using the spread operator <- Nice!
+  }
+
+  addModifiedContentToList(newContentFromChild: Content) {
+    newContentFromChild.id = this.memoryService.genId(this.projectList);
+
+    this.projectService.addContent(newContentFromChild).subscribe(() =>
+      console.log("Content added successfully")
+    );;
+
+    this.projectList.push(newContentFromChild);
+    // We need to clone the array for the pipe to work
+    // This is an old way of cloning an object
+    this.projectList = Object.assign([], this.projectList);
+    // This is a newer, faster way to clone an array
+    this.projectList = [...this.projectList]; // usin
   }
 }

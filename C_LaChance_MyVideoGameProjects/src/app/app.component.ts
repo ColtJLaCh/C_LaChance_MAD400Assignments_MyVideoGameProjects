@@ -16,9 +16,11 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
+    /*
     this.projectService.getContentItem(2).subscribe(
       projectAtIndex => this.individualProject = projectAtIndex
     );
+    */
   }
   displayItem(id: string): void {
     if (!parseInt(id)) {
