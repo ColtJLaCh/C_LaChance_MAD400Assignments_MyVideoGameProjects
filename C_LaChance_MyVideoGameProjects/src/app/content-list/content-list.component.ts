@@ -10,7 +10,7 @@ import { ProjectService } from '../services/project.service';
 })
 export class ContentListComponent implements OnInit {
 
-  myContentArr: Content[] = new Array();
+  projectList: Content[] = new Array();
   searchValue: string = "";
   searchedTitle: string = "";
   searchedTitleClass: string = "";
@@ -30,13 +30,13 @@ export class ContentListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.myContentArr = this.projectService.getContent();
+    this.projectService.getContent().subscribe(listOfProjects => this.projectList = listOfProjects);
   }
 
   searchForTitle(sTerm: string): void {
     var displayMessage = "No, item does not exist.";
-    for (var i = 0; i < this.myContentArr.length; i++) {
-      if (this.myContentArr[i].title == sTerm) {
+    for (var i = 0; i < this.projectList.length; i++) {
+      if (this.projectList[i].title == sTerm) {
         displayMessage = "Yes this item exists!"
       }
     }
@@ -55,11 +55,11 @@ export class ContentListComponent implements OnInit {
   }
 
   addContentToList(newContentFromChild: Content) {
-    this.myContentArr.push(newContentFromChild);
+    this.projectList.push(newContentFromChild);
     // We need to clone the array for the pipe to work
     // This is an old way of cloning an object
-    this.myContentArr = Object.assign([], this.myContentArr);
+    this.projectList = Object.assign([], this.projectList);
     // This is a newer, faster way to clone an array
-    this.myContentArr = [...this.myContentArr]; // using the spread operator <- Nice!
+    this.projectList = [...this.projectList]; // using the spread operator <- Nice!
   }
 }

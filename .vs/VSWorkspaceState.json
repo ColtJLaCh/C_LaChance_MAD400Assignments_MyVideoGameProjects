@@ -8,8 +8,9 @@
     "\\C_LaChance_MyVideoGameProjects\\src\\app\\content-list",
     "\\C_LaChance_MyVideoGameProjects\\src\\app\\create-content",
     "\\C_LaChance_MyVideoGameProjects\\src\\app\\helper-files",
+    "\\C_LaChance_MyVideoGameProjects\\src\\app\\services",
     "\\C_LaChance_MyVideoGameProjects\\src\\assets"
   ],
-  "SelectedNode": "\\C_LaChance_MyVideoGameProjects\\src\\app\\create-content\\create-content.component.html",
+  "SelectedNode": "\\C_LaChance_MyVideoGameProjects\\src\\app\\services\\project.service.ts",
   "PreviewInSolutionExplorer": false
 }
