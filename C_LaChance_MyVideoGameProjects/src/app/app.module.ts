@@ -12,6 +12,15 @@ import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
 import { ModifyContentComponent } from './modify-content/modify-content.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CreateDialogComponent } from './create-dialog/create-dialog.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatCardModule } from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -22,15 +31,24 @@ import { ModifyContentComponent } from './modify-content/modify-content.componen
     HoverAffectDirective,
     CreateContentComponent,
     MessagesComponent,
-    ModifyContentComponent
+    ModifyContentComponent,
+    CreateDialogComponent
   ],
+  entryComponents: [CreateDialogComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
       delay: 500
-    })
+    }),
+    MatButtonModule,
+    MatInputModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatAutocompleteModule,
+    MatCardModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,16 +1,20 @@
 <app-modify-content (contentModified)="addModifiedContentToList($event)"></app-modify-content>
 
 <div>
-  <h4>Search For Title</h4>
-  <input #searchTitle>
-  <br><button (click)="searchForTitle(searchTitle.value)">Search</button><br>
-  <p class="{{searchedTitleClass}}">{{searchedTitle}}</p>
+  <mat-form-field>
+    <input matInput #searchTitle placeholder="Search For Title">
+  </mat-form-field>
+      <button mat-raised-button color="primary" (click)="searchForTitle(searchTitle.value)">
+        Search
+      </button><br>
+      <p class="{{searchedTitleClass}}">{{searchedTitle}}</p>
 </div>
 
 <div>
-  <h4>Search For Type</h4>
-  <input #searchTerm>:{{searchValue}}
-  <br><button (click)="updatePage(searchTerm.value)">Update page</button>
+  <mat-form-field> 
+    <input matInput #searchTerm placeholder="Search For Type">:{{searchValue}}
+  </mat-form-field>
+ <button mat-raised-button color="primary" (click)="updatePage(searchTerm.value)">Update page</button>
 </div>
 
 <ul>

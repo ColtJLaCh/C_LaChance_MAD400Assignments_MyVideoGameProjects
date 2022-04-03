@@ -1,7 +1,9 @@
 <h1>Individual item</h1>
 <p>
-  <label>Display single item at id: <input #id></label>
-  <button (click)="displayItem(id.value)">Display item!</button>
+  <mat-form-field>
+     <input matInput #id placeholder="Display Single Item At ID">
+    </mat-form-field>
+      <button mat-raised-button color="primary" (click)="displayItem(id.value)">Display item!</button>
 </p>
 <app-content-card [content]="individualProject" class="individualProject"></app-content-card>
 <br>

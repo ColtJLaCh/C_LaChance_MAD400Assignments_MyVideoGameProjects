@@ -1,18 +1,21 @@
-<div>
-  <h2>{{this.content?.title}}</h2>
-  <p appHoverAffect>Type: {{this.content?.type}}</p>
-  <p>{{this.content?.description}}</p>
-  <ng-template [ngIf]="!content?.imgURL">
-    <img src="./assets/colton3.png" (click)="imgOnClick()">
-  </ng-template>
-  <ng-template [ngIf]="content?.imgURL">
-    <img src="{{this.content?.imgURL}}" (click)="imgOnClick()">
-  </ng-template>
-  <p>{{this.content?.creator}}</p>
-  Tags &#8595;
-  <div *ngFor="let tag of content?.tags;">
-    <p appHoverAffect [textDecor]='"bold"' [innerHtml]="tag"></p>
-  </div>
-
-</div>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{this.content?.title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p appHoverAffect>Type: {{this.content?.type}}</p>
+    <p>{{this.content?.description}}</p>
+    <ng-template [ngIf]="!content?.imgURL">
+      <img src="./assets/colton3.png" (click)="imgOnClick()">
+    </ng-template>
+    <ng-template [ngIf]="content?.imgURL">
+      <img src="{{this.content?.imgURL}}" (click)="imgOnClick()">
+    </ng-template>
+    <p>{{this.content?.creator}}</p>
+    Tags &#8595;
+    <div *ngFor="let tag of content?.tags;">
+      <p appHoverAffect [textDecor]='"bold"' [innerHtml]="tag"></p>
+    </div>
+  </mat-card-content>
+</mat-card>
 

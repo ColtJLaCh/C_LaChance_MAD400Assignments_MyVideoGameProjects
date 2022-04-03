@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>CREATE NEW CONTENT</h2>
+<mat-dialog-content>Place data into fields to create new content</mat-dialog-content>
+<mat-divider></mat-divider>
+
+<mat-autocomplete #auto="matAutocomplete">
+  <mat-option *ngFor="let option of options" [value]="option">
+    {{option}}
+  </mat-option>
+</mat-autocomplete>
+
+<mat-form-field>
+  <input matInput #contentTitle placeholder="TITLE">
+</mat-form-field>
+<mat-divider></mat-divider>
+<mat-form-field>
+  <input matInput #contentDesc placeholder="DESCRIPTION">
+</mat-form-field>
+<mat-divider></mat-divider>
+<mat-form-field>
+  <input matInput #contentCreator placeholder="CREATOR">
+</mat-form-field>
+<mat-divider></mat-divider>
+<mat-form-field>
+  <input matInput #contentImgURL placeholder="IMAGE URL (OPTIONAL)">
+</mat-form-field>
+<mat-divider></mat-divider>
+<mat-form-field>
+  <input matInput [matAutocomplete]="auto" #contentType placeholder="TYPE (OPTIONAL)">
+</mat-form-field>
+<mat-divider></mat-divider>
+<mat-form-field>
+  <input matInput #contentTags placeholder="TAGS (SEPERATE BY ,)">
+ </mat-form-field>
+  <mat-divider></mat-divider>
+  <mat-dialog-actions>
+    <button mat-button (click)="sendDataToModify(contentTitle.value,contentDesc.value,contentCreator.value,contentImgURL.value,contentType.value,contentTags.value)" mat-dialog-close>Create</button>
+    <button mat-button mat-dialog-close>Back</button>
+  </mat-dialog-actions>
