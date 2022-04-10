@@ -3,28 +3,16 @@ ul {
 }
 
 li {
-  border: 1px solid black;
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-bottom: 5%;
+  background: gray;
 }
 
-li.isFirst {
-  border: 2px solid black;
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-bottom: 5%;
+li.VideoGame {
+    background: red;
 }
 
-  li.VideoGame {
-     background: red;
-  }
-
-  li.CardGame {
-    background: lime;
-  }
+li.CardGame {
+  background: lime;
+}
 
 p.No {
   color: red;

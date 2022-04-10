@@ -20,6 +20,10 @@ import { CreateDialogComponent } from './create-dialog/create-dialog.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatCardModule } from '@angular/material/card';
+import { ContentItemComponent } from './content-item/content-item.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 
 @NgModule({
@@ -32,7 +36,10 @@ import { MatCardModule } from '@angular/material/card';
     CreateContentComponent,
     MessagesComponent,
     ModifyContentComponent,
-    CreateDialogComponent
+    CreateDialogComponent,
+    ContentItemComponent,
+    PageNotFoundComponent
+
   ],
   entryComponents: [CreateDialogComponent],
   imports: [
@@ -48,7 +55,8 @@ import { MatCardModule } from '@angular/material/card';
     MatDividerModule,
     MatAutocompleteModule,
     MatCardModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
