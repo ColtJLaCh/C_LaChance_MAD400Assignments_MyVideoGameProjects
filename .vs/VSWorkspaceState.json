@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\C_LaChance_MyVideoGameProjects",
+    "\\C_LaChance_MyVideoGameProjects\\.angular",
     "\\C_LaChance_MyVideoGameProjects\\src",
     "\\C_LaChance_MyVideoGameProjects\\src\\app",
-    "\\C_LaChance_MyVideoGameProjects\\src\\app\\create-content",
+    "\\C_LaChance_MyVideoGameProjects\\src\\app\\content-card",
+    "\\C_LaChance_MyVideoGameProjects\\src\\app\\content-item",
     "\\C_LaChance_MyVideoGameProjects\\src\\app\\helper-files",
-    "\\C_LaChance_MyVideoGameProjects\\src\\app\\messages",
-    "\\C_LaChance_MyVideoGameProjects\\src\\app\\modify-content",
     "\\C_LaChance_MyVideoGameProjects\\src\\app\\services",
     "\\C_LaChance_MyVideoGameProjects\\src\\assets"
   ],
-  "SelectedNode": "\\C_LaChance_MyVideoGameProjects\\src\\app\\modify-content\\modify-content.component.ts",
+  "SelectedNode": "\\C_LaChance_MyVideoGameProjects\\src\\app\\content-card\\content-card.component.html",
   "PreviewInSolutionExplorer": false
 }

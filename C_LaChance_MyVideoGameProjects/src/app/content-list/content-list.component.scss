@@ -1,17 +1,20 @@
 ul {
   list-style: none;
+  margin: 0%;
+  padding: 0%;
 }
 
 li {
+  padding: 0%;
   background: gray;
 }
 
 li.VideoGame {
-    background: red;
+    background: black;
 }
 
 li.CardGame {
-  background: lime;
+  background: indigo;
 }
 
 p.No {

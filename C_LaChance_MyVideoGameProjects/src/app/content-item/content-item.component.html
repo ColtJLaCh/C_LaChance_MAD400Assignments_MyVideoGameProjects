@@ -3,7 +3,7 @@
     <- Back To List
   </button>
 </form>
-<div *ngIf="individualProject" class="pokemon-{{individualProject?.id}}">
+<div *ngIf="individualProject" class="individualProject">
   <app-content-card [content]="individualProject" class="individualProject"></app-content-card>
 </div>
 <div *ngIf="!individualProject">
