@@ -20,10 +20,12 @@ import { CreateDialogComponent } from './create-dialog/create-dialog.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatCardModule } from '@angular/material/card';
+import { MatSnackBar, MAT_SNACK_BAR_DATA } from '@angular/material/snack-bar';
 import { ContentItemComponent } from './content-item/content-item.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { SwUpdate } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 
@@ -57,8 +59,10 @@ import { environment } from '../environments/environment';
     MatDividerModule,
     MatAutocompleteModule,
     MatCardModule,
+    MatSnackBar,
     BrowserAnimationsModule,
     AppRoutingModule,
+    SwUpdate,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
